@@ -24,7 +24,6 @@ io.on('connection', (socket) => {
         if (error) {
             return callback(error)
         }
-
         socket.join(user.room)
 
         socket.emit('message', generateMessage('Admin', 'Welcome!'))
